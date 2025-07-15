@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Property Listings</title>
+  
+  <!-- Google Fonts: Poppins, Inter, Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for unified social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <nav class="nav-menu">
+        <a href="#">Home</a>
+        <a href="#">Properties</a>
+        <a href="#">Shop</a>
+        <a href="#">Where in Hanoi</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Agents</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <i class="fa-solid fa-heart"></i>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <select class="lang-select">
+          <option value="en">🇬🇧 English</option>
+          <option value="vn">🇻🇳 Vietnamese</option>
+        </select>
+        <button id="addPropertyBtn" class="add-btn small">+ Add Property</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- React App -->
+  <div id="root"></div>
+
+  <!-- React Code -->
+  <script type="text/babel" src="main.js"></script>
+
+  <!-- Add Property Logic -->
+  <script type="module" src="addProperty.js"></script>
+</body>
+</html>

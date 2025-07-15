@@ -1,0 +1,272 @@
+/* Global */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.site-header {
+  background-color: #6BAAA8;
+  padding: 15px 0;
+  color: white;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+  opacity: 0.7;
+}
+
+/* Actions (icons, language) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-actions i {
+  color: white;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.nav-actions i:hover {
+  transform: scale(1.2);
+}
+
+.lang-select {
+  background-color: white;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  border: none;
+}
+
+/* Add Property Button (Header Style) */
+.add-btn.small {
+  padding: 6px 12px;
+  font-size: 13px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  color: #6BAAA8;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn.small:hover {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+/* Property Cards */
+.property-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #4fb;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.3s ease;
+}
+
+.modal-content h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Form Layout */
+#propertyForm {
+  display: grid;
+  gap: 1rem;
+}
+
+#propertyForm input[type="text"],
+#propertyForm input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+#propertyForm label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #6BAAA8;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #588f8e;
+}
+
+/* Modal Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

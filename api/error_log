@@ -1,0 +1,5 @@
+[15-Jul-2025 13:20:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'your_db_user'@'localhost' (using password: YES) in /home/z0lcrpuxi6vk/public_html/properties/api/properties.php:10
+Stack trace:
+#0 /home/z0lcrpuxi6vk/public_html/properties/api/properties.php(10): mysqli->__construct()
+#1 {main}
+  thrown in /home/z0lcrpuxi6vk/public_html/properties/api/properties.php on line 10
